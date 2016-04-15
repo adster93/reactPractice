@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<p></p>
+</body>
+<script type="text/jsx">
+var Badge = React.createClass({
+	render: function(){
+	return <button class="btn btn-primary" type="button">
+  Messages <span class="badge">4</span>
+</button>
+	}
+
+})
+
+var element = React.createElement(Badge);
+
+React.render(element, document.body);
+</script>
