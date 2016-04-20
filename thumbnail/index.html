@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 target">
+				
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/jsx">
+var Badge = React.createClass({
+	render: function(){
+
+	return <button className="btn btn-primary" type="button">
+   {this.props.title} <span className="badge">{this.props.number}</span>
+</button>
+	}
+
+})
+
+var Thumbnail = React.createClass({
+	render: function(){
+	return <div className="thumbnail">
+      <img src={this.props.imageUrl}/>
+      <div className="caption">
+        <h3>{this.props.header}</h3>
+        <p>{this.props.description}</p>
+        <p>
+        	<Badge title={this.props.title} number={this.props.number} />
+        </p>
+      </div>
+    </div>
+	}
+});
+
+var options = {
+	title: 'See Tutorials',
+	number: 32,
+	imageUrl: 'https://tleunen.github.io/react-mdl/react.svg',
+	header: 'Learn React',
+	description: 'React is a fantastic new library for making fast, dynamic pages'
+};
+
+var element = React.createElement(Thumbnail, options);
+
+React.render(element, document.querySelector('.target'));
+</script>
+
+
+
+
+
+
+

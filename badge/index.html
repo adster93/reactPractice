@@ -12,14 +12,21 @@
 <script type="text/jsx">
 var Badge = React.createClass({
 	render: function(){
-	return <button class="btn btn-primary" type="button">
-  Messages <span class="badge">4</span>
+	this.props
+
+	return <button className="btn btn-primary" type="button">
+   {this.props.title} <span className="badge">{this.props.number}</span>
 </button>
 	}
 
 })
 
-var element = React.createElement(Badge);
+var options = {
+	title: 'Sent',
+	number: 12
+};
+
+var element = React.createElement(Badge, options);
 
 React.render(element, document.body);
 </script>
